@@ -41,7 +41,6 @@ const calculatorHandler = (req, res) => {
     req.on("end", () => {
       const parsedBody = Buffer.concat(body).toString();
       const params = new URLSearchParams(parsedBody);
-      console.log("params:", params);
       const num1 = parseFloat(params.get("num1"));
       const num2 = parseFloat(params.get("num2"));
       const sum = num1 + num2;

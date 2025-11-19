@@ -1,5 +1,4 @@
 const calculatorHandler = (req, res) => {
-  console.log(req.url, req.method);
   if (req.url === "/") {
       res.setHeader('Content-Type', 'text/html');
     res.write(`

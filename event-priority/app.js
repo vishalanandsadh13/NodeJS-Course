@@ -7,7 +7,7 @@ const server = http.createServer((req, res) => {
   Promise.resolve().then(() => console.log("Promise"));
 
   setTimeout(() => console.log("Timeout"), 0);
-  setImmediate(() => console.log("Immediate"));
+  setImmediate(() => console.log("Immediate ."));
 
   res.end("Hello World");
 });

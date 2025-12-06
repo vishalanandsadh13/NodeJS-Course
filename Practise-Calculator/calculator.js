@@ -5,7 +5,7 @@ const calculatorHandler = (req, res) => {
       <!DOCTYPE html>
       <html>
         <head>
-          <title>Calculator</title>
+          <title>Calculator Page</title>
         </head>
         <body>
           <h1>Welcome to the calculator <a href="/calculate">Home</a></h1>

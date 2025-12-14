@@ -14,7 +14,7 @@ const calculatorHandler = (req, res) => {
       `);
     res.end();
   }
-  else if (req.url === "/calculate") {
+  else if (req.url === "/calculateSum") {
       res.setHeader('Content-Type', 'text/html');
     res.write(`
       <!DOCTYPE html>

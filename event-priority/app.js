@@ -6,7 +6,7 @@ const server = http.createServer((req, res) => {
   process.nextTick(() => console.log("Next Tick"));
   Promise.resolve().then(() => console.log("Promise"));
 
-  setTimeout(() => console.log("Timeout"), 0);
+  setTimeout(() => console.log("Time out "), 0);
   setImmediate(() => console.log("Immediate"));
 
   res.end("Hello World");

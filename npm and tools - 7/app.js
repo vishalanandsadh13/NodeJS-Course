@@ -1,0 +1,10 @@
+const http = require("http");
+
+const server = http.createServer((req,res) => {
+  console.log("req",req);
+})
+
+const port = 3000; bn 
+server.listen(port, ()=>{
+  console.log(`Server is listening on port ${port}`);
+})

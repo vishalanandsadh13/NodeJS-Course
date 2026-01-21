@@ -17,14 +17,13 @@ app.use("/",(req,res,next)=>{
 // })
 app.get("/",(req,res,next)=>{
   console.log("handlong / for get",req.url,req.method);
-  res.send("<h1>welcome to complete coding!</h1>");
+  res.send("<h1>welcome to Landing Page!</h1>");
 });
 
 app.get("/contact-us",(req,res,next)=>{
   console.log("handlong /contact-us for get",req.url,req.method);
   res.send("<h1>please give your details!</h1>");
 });
-
 
 const PORT = 3001
 app.listen(PORT,()=>{

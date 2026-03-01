@@ -1,26 +1,19 @@
 const exress = require("express");
+const path = require("path"); 
 
 const hostRouter = exress.Router();
 
 hostRouter.get("/add-home", (req, res, next) => {
-  console.log("Request URL:", req.url);
-  console.log("Request Method:", req.method);
-  res.send(`
-    <h1>Register Your Home on AirBnb!</h1>
-    <form action="/add-home" method="POST">
-      <input type="text" name="homeName" placeholder="Enter Home Name"/>
-      <input type="text" name="location" placeholder="Enter Location"/>
-      <button type="submit">Submit</button>
-    </form>
-    `);
-  next();
-});
+
+  res.sendFile(path.join(__dirname, "../", "views", "addHome.html"), err => {
+    if (err) return next(err);
+  });     
+}); 
 
 hostRouter.post("/add-home", (req, res, next) => {
-  console.log("Request URL:", req.url);
-  console.log("Request Method:", req.method);
-  console.log("Form Data:", req.body);
-  res.send(`<h1>Home Added Successfully!</h1><a href="/"> Go to Home </a>`);
+  res.sendFile(path.join(__dirname, "../", "views", "homeAdded.html"), err => {
+    if (err) return next(err);
+  });
   });
 
 module.exports = hostRouter;

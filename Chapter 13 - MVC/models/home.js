@@ -26,6 +26,7 @@ module.exports = class Home{
     const homeDataPath = path.join(rootDir, 'data', 'homes.json');
     try {
       const data = fs.readFileSync(homeDataPath, 'utf-8');
+      console.log("file data", data);
       return JSON.parse(data);
     } catch (err) {
       // If file doesn't exist or is empty, return empty array

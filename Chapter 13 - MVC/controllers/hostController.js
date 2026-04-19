@@ -19,7 +19,8 @@ exports.getHostHomes = (req, res, next) => {
 
 exports.postAddHome = (req, res, next) => {
   const { houseName, price, location, rating, photoUrl } = req.body;
-  const home = new Home(houseName, price, location, rating, photoUrl);
+  const finalPhotoUrl = photoUrl || "/images/default-home.svg";
+  const home = new Home(houseName, price, location, rating, finalPhotoUrl);
   home.save();
 
   res.render("host/home-added", {

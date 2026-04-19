@@ -10,9 +10,23 @@
       </li>
       <li>
         <a
+          href="/bookings"
+          class="<%= currentPage === 'Bookings' ? 'bg-red-700' : 'hover:bg-red-400' %> py-2 px-4 rounded transition duration-300"
+          >Bookings</a
+        >
+      </li>
+      <li>
+        <a
           href="/host/add-home"
           class="<%= currentPage === 'Add Home' ? 'bg-red-700' : 'hover:bg-red-400' %> py-2 px-4 rounded transition duration-300"
           >Add Home</a
+        >
+      </li>
+      <li>
+        <a
+          href="/favourites"
+          class="<%= currentPage === 'Favourite List' ? 'bg-red-700' : 'hover:bg-red-400' %> py-2 px-4 rounded transition duration-300"
+          >Favourites</a
         >
       </li>
     </ul>

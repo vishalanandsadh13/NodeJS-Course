@@ -11,12 +11,4 @@ exports.postAddHome = (req, res, next) => {
   res.render('host/homeAdded', { pageTitle: 'Home Added Successfully', currentPage: 'Home Added' });
 };
 
-exports.getHome = (req, res, next) => {
-  const registeredHomes = Home.fetchAll();
-  res.render('store/home-list', {
-    registeredHomes,
-    pageTitle: 'airbnb Home',
-    currentPage: 'Home'
-  });
-};
 

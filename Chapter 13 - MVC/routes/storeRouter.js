@@ -1,10 +1,13 @@
 // External Module
-const express = require('express');
+const express = require("express");
 const storeRouter = express.Router();
 
-const storeController = require('../controllers/storeController');
-storeRouter.get("/", storeController.getHome);
-storeRouter.get("/bookings", storeController.getBookings);  
-storeRouter.get("/Index", storeController.getIndex);  
-storeRouter.get("/favourites", storeController.getFavouriteList);   
+// Local Module
+const homesController = require("../controllers/storeController");
+
+storeRouter.get("/", homesController.getIndex);
+storeRouter.get("/homes", homesController.getHomes);
+storeRouter.get("/bookings", homesController.getBookings);
+storeRouter.get("/favourites", homesController.getFavouriteList);
+
 module.exports = storeRouter;

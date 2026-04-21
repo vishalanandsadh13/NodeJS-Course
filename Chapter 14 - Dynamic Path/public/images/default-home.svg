@@ -1,0 +1,11 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f8fafc"/>
+  <rect x="24" y="24" width="352" height="192" fill="#e2e8f0" rx="16"/>
+  <rect x="68" y="220" width="120" height="48" fill="#cbd5e1" rx="8"/>
+  <rect x="212" y="220" width="120" height="48" fill="#cbd5e1" rx="8"/>
+  <circle cx="104" cy="242" r="12" fill="#94a3b8"/>
+  <circle cx="296" cy="242" r="12" fill="#94a3b8"/>
+  <path d="M120 140 L160 80 L240 96 L280 140 Z" fill="#64748b"/>
+  <text x="200" y="170" font-size="20" text-anchor="middle" fill="#475569" font-family="Arial, sans-serif">Default Home Image</text>
+  <text x="200" y="190" font-size="14" text-anchor="middle" fill="#64748b" font-family="Arial, sans-serif">No image provided</text>
+</svg>

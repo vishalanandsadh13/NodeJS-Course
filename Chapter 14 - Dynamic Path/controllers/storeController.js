@@ -20,6 +20,15 @@ exports.getHomes = (req, res, next) => {
   );
 };
 
+exports.getHomeDetails = (req, res, next) => {
+  const homeId = req.params.homeId;
+  res.render("store/home-detail", {
+    pageTitle: "Home Details",
+    currentPage: "home-detail",
+    homeId: homeId,
+  });
+}
+
 exports.getBookings = (req, res, next) => {
   res.render("store/bookings", {
     pageTitle: "My Bookings",

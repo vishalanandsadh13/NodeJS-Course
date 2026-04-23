@@ -22,10 +22,17 @@ exports.getHomes = (req, res, next) => {
 
 exports.getHomeDetails = (req, res, next) => {
   const homeId = req.params.homeId;
-  res.render("store/home-detail", {
-    pageTitle: "Home Details",
-    currentPage: "home-detail",
-    homeId: homeId,
+  Home.findById(homeId, (home) => {
+    if (!home) {
+      res.redirect("/homes");
+      
+    }
+    res.render("store/home-detail", {
+      pageTitle: "Home Details",
+      currentPage: "home-detail",
+      homeId: homeId,
+      home: home
+    });
   });
 }
 

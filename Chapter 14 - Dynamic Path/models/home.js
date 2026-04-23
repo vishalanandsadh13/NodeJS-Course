@@ -29,4 +29,11 @@ module.exports = class Home {
       callback(!err ? JSON.parse(data) : []);
     });
   }
+
+  static findById(homeId, callback) {
+    Home.fetchAll((registeredHomes) => {
+      const homeFound = registeredHomes.find((home) => home.id === homeId);
+      callback(homeFound);
+    });   
+  }
 };

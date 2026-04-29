@@ -18,7 +18,6 @@ module.exports = class Home {
       registeredHomes.push(this);
       const homeDataPath = path.join(rootDir, "data", "homes.json");
       fs.writeFile(homeDataPath, JSON.stringify(registeredHomes), (error) => {
-        console.log("File Writing Concluded", error);
       });
     });
   }

@@ -22,6 +22,7 @@ module.exports = class Home {
     });
   }
 
+  
   static fetchAll(callback) {
     const homeDataPath = path.join(rootDir, "data", "homes.json");
     fs.readFile(homeDataPath, (err, data) => {
